@@ -1,9 +1,10 @@
 
 import React from "react";
 
-const Tooltip=({text,children})=>{
+const Tooltip=({text1,children1,text2,children2})=>{
    return( <div>
-    <p title={text}>{children}</p>
+   <h2 className="tooltip" title={text1}>{children1}</h2>
+    <p className="tooltip" title={text2}>{children2}</p>
 
    </div>)
 }
