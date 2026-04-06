@@ -8,8 +8,9 @@ const Tooltip=({text,children})=>{
       onMouseOver={()=>setVisible(true)}
       onMouseLeave={()=>setVisible(false)}
    className="tooltip">
-      <h2 className="heading">{children}</h2>
+      <h2 className="heading">{children}
       { visible && <p className="para">{text}</p>}
+      </h2>
 
      
    </div>)
