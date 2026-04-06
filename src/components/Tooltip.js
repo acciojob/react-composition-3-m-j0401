@@ -1,11 +1,17 @@
 
-import React from "react";
+import React, { useState } from "react";
 
-const Tooltip=({text1,children1,text2,children2})=>{
-   return( <div>
-   <h2 className="tooltip" title={text1}>{children1}</h2>
-    <p className="tooltip" title={text2}>{children2}</p>
+const Tooltip=({text,children})=>{
+   let[visible,setVisible]=useState(false)
+   return( <div 
+      onMouseEnter={()=>setVisible(false)}
+      onMouseOver={()=>setVisible(true)}
+      onMouseLeave={()=>setVisible(false)}
+   className="tooltip">
+      <h2 className="heading">{children}</h2>
+      { visible && <p className="para">{text}</p>}
 
+     
    </div>)
 }
 export default Tooltip;
